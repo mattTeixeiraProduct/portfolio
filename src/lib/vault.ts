@@ -113,24 +113,15 @@ const vault = {
             },
             learning2: {
                 title: "2. Don't jump to high-fidelity straight away",
-                body1: "We lost precious time that we didn't have by trying too many designs in a very high-fidelity. The team thought that by doing so we could be faster. By that hurt us since each design critique, stakeholders would propose changes. Instead of making us faster, it made us slower.",
-                body2: "Had we done the same in lower fidelities, it would have helped us focus on structure a bit more and not have to polish designs that we were only trying too much - it would also get stakeholders to focus on what matters: the structure of layout of the UI."
+                body: "Had we done the same in lower fidelities, it would have helped us focus on structure a bit more and not have to polish designs that we were only trying too much - it would also get stakeholders to focus on what matters: the structure of layout of the UI."
             },
         }
     },
     nextSteps: {
         title: "Next Steps",
         subTitle: "What we'll focus on next",
-        array: [
-            {
-                subSubTitle: "1. Keep focusing on real value",
-                body: "As a startup, Safewill has (for now) limited staff and capital allocation. In a way, that's a great thing, since it makes us really be selfish with our time and focus only on efforts that provide real value to the user. At first, we only intend to answer very important questions and experiment with very important solutions."
-            },
-            {
-                subSubTitle: "2. Improve the product's guidance",
-                body: "End-of-Life and Estate Planning preparation and very unknown subjects - part of it due to death being very tabu, no one ever wants to think about it. Another priority for us is to focus on making it more intuitive for the user what are important documents to upload, as well as guiding them on how to guide their Executor so that their Executor is not lost when the worst happens."
-            }
-        ],
+        subSubTitle: "Improve the product's guidance",
+        body: "End-of-Life and Estate Planning preparation and very unknown subjects - part of it due to death being very tabu, no one ever wants to think about it. Another priority for us is to focus on making it more intuitive for the user what are important documents to upload, as well as guiding them on how to guide their Executor so that their Executor is not lost when the worst happens."
     }
 }
 

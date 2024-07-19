@@ -7,10 +7,7 @@ import Divider from "@/components/ui/projects/project-page/divider";
 import ProblemComponent from "@/components/ui/projects/project-page/problem";
 import SolutionComponent from "@/components/ui/projects/project-page/solution";
 import Discovery from "@/components/ui/projects/project-page/discovery";
-import ProblemStatement from "@/components/ui/projects/project-page/problem-statement";
-import Wireframes from "@/components/ui/projects/project-page/wireframes";
 import HighFidelity from "@/components/ui/projects/project-page/high-fildelity";
-import DataPrivacy from "@/components/ui/projects/project-page/data-privacy";
 import Learnings from "@/components/ui/projects/project-page/learnings";
 import NextSteps from "@/components/ui/projects/project-page/next-steps"
 import IdeatingSolutions from "@/components/ui/projects/project-page/ideating-solutions";
@@ -71,6 +68,25 @@ export default function VaultPage() {
                 body1={vault.constraints.body1}
                 body2={vault.constraints.body2}
                 body3={vault.constraints.body3}
+            />
+            <Divider />
+            <HighFidelity
+                sectionHeading={vault.highFidelity.sectionHeading}
+                title={vault.highFidelity.title}
+                image={vault.highFidelity.image}
+            />
+            <Divider />
+            <Learnings
+                sectionHeading={vault.learnings.sectionHeading}
+                title={vault.learnings.title}
+                array={vault.learnings.array}
+            />
+            <Divider />
+            <NextSteps
+                title={vault.nextSteps.title}
+                subTitle={vault.nextSteps.subTitle}
+                subSubTitle={vault.nextSteps.subSubTitle}
+                body={vault.nextSteps.body}
             />
         </>
     );

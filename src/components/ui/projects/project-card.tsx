@@ -16,15 +16,15 @@ type Props = {
 
 const ProjectCard = ({ projectName, valueProp1, valueProp2, image, tags, href }: Props) => {
     return (
-        <Link href={href} className="w-full">
+        <Link href={href} className="w-full px-20">
             <div
-                className="w-full h-screen hover:bg-black/5 dark:hover:bg-white/5 border-y-2 border-t-gray-200 dark:border-t-gray-800 flex flex-col md:flex-row gap-10 md:gap-5 justify-between p-4 transition-transform duration-300">
-                <div className="flex flex-col justify-between items-start">
+                className="w-full h-fit hover:bg-black/5 dark:hover:bg-white/5 border-y-2 border-t-gray-200 dark:border-t-gray-800 flex flex-col md:flex-row gap-10 md:gap-5 justify-between p-4 transition-transform duration-300">
+                <div className="flex flex-col justify-between items-start w-3/5">
                     <div className="flex flex-col gap-12">
-                        <h2 className="text-2xl md:text-3xl font-medium">{projectName}</h2>
+                        <h2 className="text-2xl md:text-3xl font-bold">{projectName}</h2>
                         <div className="flex flex-col gap-4">
-                            <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm"><Info className="mr-1 text-gray-500 dark:text-gray-500" />{valueProp1}</span>
-                            <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm"><Goal className="mr-1 text-gray-500 dark:text-gray-500" />{valueProp2}</span>
+                            <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-md"><Info className="mr-1 text-gray-500 dark:text-gray-500" />{valueProp1}</span>
+                            <span className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-md"><Goal className="mr-1 text-gray-500 dark:text-gray-500" />{valueProp2}</span>
                         </div>
                     </div>
                     <div className="flex gap-2 flex-wrap">
@@ -37,7 +37,7 @@ const ProjectCard = ({ projectName, valueProp1, valueProp2, image, tags, href }:
                     </div>
                 </div>
                 <div className="w-full h-full relative">
-                    <Image src={image} alt={projectName} fill />
+                    <Image src={image} alt={projectName} width={4800} height={2800} />
                 </div>
             </div>
         </Link>

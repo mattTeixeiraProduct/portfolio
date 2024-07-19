@@ -10,7 +10,6 @@ import {
     NavigationMenuLink,
     NavigationMenuList,
     NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
 } from "@/components/ui/navbar/navigation-menu-primitives"
 import { ModeToggle } from "@/components/theme/switcher"
 
@@ -26,9 +25,9 @@ const components: { title: string; href: string; description: string }[] = [
         description: "Increased B2B customer acquisition by 12%",
     },
     {
-        title: "TribeMeet",
-        href: "/project/tribemeet",
-        description: "North Star metric: Event tickets purchased over the last 30 days",
+        title: "The Australian",
+        href: "/project/the-australian",
+        description: "17% increase in challenger group users page views",
     }
 ]
 
@@ -38,7 +37,7 @@ export function NavigationMenuDemo() {
             <NavigationMenu>
                 <NavigationMenuList>
                     <NavigationMenuItem>
-                        <Link href="/">
+                        <Link href="/" className="text-md hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-md py-2 px-4">
                             Home
                         </Link>
                     </NavigationMenuItem>
@@ -51,6 +50,7 @@ export function NavigationMenuDemo() {
                                         key={component.title}
                                         title={component.title}
                                         href={component.href}
+                                        className="text-md"
                                     >
                                         {component.description}
                                     </ListItem>
@@ -59,10 +59,8 @@ export function NavigationMenuDemo() {
                         </NavigationMenuContent>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/about" legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                About Me
-                            </NavigationMenuLink>
+                        <Link href="/about" className="text-md hover:bg-zinc-200 dark:hover:bg-zinc-800 rounded-md py-2 px-4">
+                            About Me
                         </Link>
                     </NavigationMenuItem>
                 </NavigationMenuList>
@@ -85,13 +83,13 @@ const ListItem = React.forwardRef<
                 <a
                     ref={ref}
                     className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground text-md hover:bg-zinc-200 dark:hover:bg-zinc-800",
                         className
                     )}
                     {...props}
                 >
-                    <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                    <div className="text-md font-medium leading-none">{title}</div>
+                    <p className="line-clamp-2 text-md leading-snug text-muted-foreground">
                         {children}
                     </p>
                 </a>

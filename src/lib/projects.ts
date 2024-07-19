@@ -9,7 +9,7 @@ const projects = [
         id: "vault"
     },
     {
-        projectName: "Partnerships Dashboard - Enabling Charities to Visualise and Thrive",
+        projectName: "Partnerships Dashboard | Enabling Charities to Visualise and Thrive",
         valueProp1: "Data visualisation dashboard for Safewill's partners so that they can take better decisions",
         valueProp2: "Increased B2B customer acquisition by 12%",
         image: "/partnerships/cover-page.png",
@@ -18,13 +18,13 @@ const projects = [
         id: "partnerships"
     },
     {
-        projectName: "TribeMeet - Meet Like-Minded People Through Attending Great Events",
-        valueProp1: "App to meet like-minded people through attending great events",
-        valueProp2: "North Star metric: Event tickets purchased over the last 30 days",
-        image: "/tribemeet/cover-page.png",
-        tags: ["MVP", "End-to-end", "Client", "Product Vision"],
-        href: "/project/tribemeet",
-        id: "tribemeet"
+        projectName: "The Australian | Using Algorithms to Validate Content Recommendation Personalisation",
+        valueProp1: "Used of third party algorithms to cheaply validate content recommendation personalisation to enable it at scale",
+        valueProp2: "17% increase in challenger group users page views",
+        image: "/the-australian/cover-page.png",
+        tags: ["Entreprise", "MVP", "Value Prop Validation", "Product Vision"],
+        href: "/project/the-australian",
+        id: "the-australian"
     }
 ];
 

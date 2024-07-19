@@ -1,5 +1,7 @@
-import Image from "next/image";
+'use client'
 import { Dot } from "lucide-react";
+import ImageOverlay from "../../image-overlay";
+import { Body } from "@/components/typography/typography";
 
 type HeaderItem = {
     heading: string;
@@ -9,25 +11,25 @@ type HeaderItem = {
 
 export default function ProjectHeader({ header, width, height }: { header: HeaderItem[], width: number, height: number }) {
     return (
-        <div className="w-full flex flex-row gap-0 z-0 py-20 px-40" id="header">
+        <div className="w-full flex flex-row gap-2 z-0 py-20 px-40" id="header">
             {header.map((item, index) => (
                 <div key={index} className="w-full flex flex-col text-center items-center gap-5">
                     <div className="relative rounded-3xl w-fit h-fit">
-                        <Image src={item.image} alt={item.heading} width={width} height={height} className="rounded-3xl" />
+                        <ImageOverlay src={item.image} alt={item.heading} width={width} height={height} />
                     </div>
                     <h3 className="text-2xl font-medium">{item.heading}</h3>
                     <div className="flex flex-col">
                         {typeof item.body === 'string' ? (
-                            <p>{item.body}</p>
+                            <Body>{item.body}</Body>
                         ) : (
-                            <>
+                            <div className="flex flex-col gap-4">
                                 <div className="flex flex-row items-start">
-                                    <Dot className="mr-2" /> <p className="text-start">{item.body.copy1}</p>
+                                    <Dot className="mr-2" /> <Body>{item.body.copy1}</Body>
                                 </div>
                                 <div className="flex flex-row items-start">
-                                    <Dot className="mr-2" /> <p className="text-start">{item.body.copy2}</p>
+                                    <Dot className="mr-2" /> <Body>{item.body.copy2}</Body>
                                 </div>
-                            </>
+                            </div>
                         )}
                     </div>
                 </div>

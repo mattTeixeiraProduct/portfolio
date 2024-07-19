@@ -12,7 +12,7 @@ type Props = {
         body: string;
         image: string;
     },
-    solution2: {
+    solution2?: {
         heading: string;
         body: string;
         image: string;
@@ -32,13 +32,14 @@ function SolutionComponent({ sectionHeading, title, solution1, solution2 }: Prop
                     </div>
                     <ImageOverlay src={solution1.image} alt={solution1.heading} width={600} height={600} />
                 </div>
-                <div className="flex flex-row gap-4 items-center justify-center">
+                {solution2 && <div className="flex flex-row gap-4 items-center justify-center">
                     <ImageOverlay src={solution2.image} alt={solution2.heading} width={600} height={600} />
                     <div className="flex flex-col gap-4">
                         <h3 className="text-2xl font-bold">{solution2.heading}</h3>
                         <Body>{solution2.body}</Body>
                     </div>
                 </div>
+                }
             </div>
         </div>
     );

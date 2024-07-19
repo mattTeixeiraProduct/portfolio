@@ -9,9 +9,10 @@ type Props = {
     title: string,
     body1: string,
     body2: string,
+    body3?: string,
     image: string
 }
-function ProblemComponent({ sectionHeading, title, body1, body2, image }: Props) {
+function ProblemComponent({ sectionHeading, title, body1, body2, body3, image }: Props) {
     return (
         <div className="flex flex-row gap-8 p-20" id="overview">
            <SectionHeading>{sectionHeading}</SectionHeading>
@@ -20,6 +21,7 @@ function ProblemComponent({ sectionHeading, title, body1, body2, image }: Props)
                 <Body>{body1}</Body>
                 <ImageOverlay src={image} alt={title} width={1000} height={400} />
                 <Body>{body2}</Body>
+                {body3 && <Body>{body3}</Body>}
             </div>
         </div>
     );
